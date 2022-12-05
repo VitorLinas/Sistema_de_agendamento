@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="style/imgs/agenda.png">
+    <title>SISTEMA DE AGENDAMENTO</title>
+</head>
+<body>
+    <button id="adicionar" onclick="add()">+</button>
+    <header id="header">
+        <h1>SISTEMA DE AGENDAMENTO</h1>
+    
+        <!-- <div class="tema">
+            <button style="background-color: black;" onclick="tema()"></button>
+            <button style="background-color: white;"></button>
+        </div> -->
+    </header>
+    
+    
+    <div id="localizacaoCard">
+        
+    </div>
+
+
+    <main>
+
+        <h1 id="bodySemMarcação">Não há nenhum cliente agendado</h1>
+
+        <section id="containerDeAgendamento">
+
+            <button id="x" class="x_agendamento" onclick="x()">X</button>
+
+            <div class="inputDeAgendamento">
+                <h1>CLIENTE:</h1>
+                <input type="text" id="input1">
+            </div>
+
+            <div class="inputDeAgendamento">
+                <h1>DIA:</h1>
+                <input type="date" id="input2">
+            </div>
+
+            <div class="inputDeAgendamento">
+                <h1>HORÁRIO:</h1>
+                <input type="time" id="input3">
+                <p id="a">a</p>
+                <input type="time" id="input4">
+            </div>
+
+            <div class="inputDeAgendamento">
+                <h1>SERVIÇO QUE SERÁ FEITO:</h1>
+                <input type="text" id="input5">
+                <button id="add">+</button>
+            </div>
+
+            <div class="inputDeAgendamento">
+                <h1>OBSERVAÇÃO:</h1>
+                <input  type="text" id="input6">
+            </div>
+
+            <button id="adicionarAgendamento" onclick="adicionar()">Adicionar</button>
+        </section>
+    </main>
+
+    <!-- <div class="cardDeAgendamento">
+        <div>
+            <p>Vitor Gabriel</p>
+            <p>19/10/2022</p>
+            <p>20:24 a 21:00</p>
+        </div>
+
+        <h2>Corte comum e sombrancelha</h2>
+
+        <p class="obs">*Cliente ira pagar no pix, pois não tem dinheiro fisico</p>
+    </div>  -->
+  
+
+
+</body>
+<script src="script/script.js"></script>
+</html>

@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #edecec;
+    /* background-color: #444141; */
+}
+
+
+#adicionar{
+    position: fixed;
+    border-radius: 50%;
+    width: 80px;
+    background-color: #3498DB;
+    /* background-color: #265e84; */
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+    font-size: 60px;
+    border: none;
+    color: white;
+    /* color: black; */
+    cursor: pointer;
+    border: 2px solid #edecec;
+}
+
+header{
+    display: flex;
+    background-color: #3498DB;
+    /* background-color: #265e84; */
+    text-align: center;
+}
+
+header h1{
+    color: white;
+    font-size: 70px;
+    margin: 5px auto;
+   
+}
+
+
+
+#bodySemMarcação{
+    font-size: 40px;
+    color: darkblue;
+    text-align: center;
+    margin-top: 20%;
+    color: #a6a6a6;
+}
+
+#containerDeAgendamento{
+    text-align: center;
+    width: 1200px;
+    height: 600px;
+    background-color: white;
+    /* position: absolute; */
+    z-index: 3;
+
+    /* margin-top: -350px;
+    margin-left: 380px; */
+
+    display: none;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;  
+
+    position: fixed;
+ 
+    top: 20%;
+    left: 20%;
+    
+
+}
+
+
+.x_agendamento{
+    float: right;
+    margin: 20px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#adicionarAgendamento{
+    text-align: center;
+    color: white;
+    background-color: #3498DB;
+    border: none;
+    font-size: 25px;
+    padding: 7px;
+    margin-top: 40px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.inputDeAgendamento{
+    display: flex;
+    margin: 55px;
+}
+
+.inputDeAgendamento input{
+    font-size: 18px;
+    background: none;
+    border-color: black;
+    /* color: #edecec; 
+    border:  2px solid #edecec; */
+}
+
+
+.inputDeAgendamento h1{
+    margin-right: 15px;
+    font-weight: 400;
+}
+
+#a{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#add{
+    width: 25px;
+    margin-left: 150px;
+    font-size: 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    background: none;
+    cursor: pointer;
+}
+
+
+
+
+
+.cardDeAgendamento {
+    background-color: white;
+    text-align: center;
+    width: 800px;
+    margin: 100px auto;
+    border:  2px solid black;
+    border-radius: 20px;
+    /* display: none; */
+
+    /* position: relative; */
+    z-index: 1;
+
+   
+}
+
+.cardDeAgendamento div{
+    display: flex;
+    justify-content: space-around; 
+    border-bottom:  2px solid black; 
+    padding: 20px;
+    font-size: 25px;
+}
+
+
+.cardDeAgendamento h2{
+    border-bottom:  2px solid black;
+    padding: 30px;
+    font-size: 30px;
+}
+
+.cardDeAgendamento div p{
+   /* background-color: #a6a6a644; */
+}
+
+
+
+
+.cardDeAgendamento .obs{
+    font-size: 20px;
+    padding: 30px;
+}
+
+
