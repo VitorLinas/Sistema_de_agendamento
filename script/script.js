@@ -1,18 +1,15 @@
-let agendamento = document.getElementById("containerDeAgendamento");
-let mensagemBody = document.getElementById("bodySemMarcação");
+const agendamento = document.getElementById("containerDeAgendamento");
+const mensagemBody = document.getElementById("bodySemMarcação");
 
-const inputsI = document.querySelector('#input1');
-const inputsII = document.querySelector('#input2');
-const inputsIII = document.querySelector('#input3');
-const inputsIV = document.querySelector('#input4');
-const inputsX = document.querySelector('#input5');
-const inputsXI = document.querySelector('#input6');
+const input1Clean = document.querySelector('#input1');
+const input2Clean = document.querySelector('#input2');
+const input3Clean = document.querySelector('#input3');          // PARA LIMPAR
+const input4Clean = document.querySelector('#input4');
+const input5Clean = document.querySelector('#input5');
+const input6Clean = document.querySelector('#input6');
 
 function add(){
-    
-    agendamento.style.display ="block";
-
-    
+    agendamento.style.display ="block";  
 }
 
 function x(){
@@ -20,30 +17,26 @@ function x(){
 }
 
 function adicionar() {
-
     mensagemBody.style.display = "none";
     agendamento.style.display = "none";
     criarCard();
-    // pegarDados();
-    
 
 }
 
-function criarCard(cardText) {
+function criarCard() {
     let input1 = document.getElementById("input1").value;
     let input2 = document.getElementById("input2").value;
     let input3 = document.getElementById("input3").value;
-    let input4 = document.getElementById("input4").value;
+    let input4 = document.getElementById("input4").value;          // PARA CRIAR
     let input5 = document.getElementById("input5").value;
     let input6 = document.getElementById("input6").value;
-    console.log(cardText);
 
     if( input1 == '' || input2 =='' || input3 =='' || input4 =='' || input5 =='' || input6 ==''){
         window.alert("Preencha todos os campos!");
         agendamento.style.display = "block";
-        // mensagemBody.style.display = "block";
 
     }else{
+
     const information = {
         cliente: `${input1}`,
         dia: `${input2}`,
@@ -53,27 +46,29 @@ function criarCard(cardText) {
         observacao: `${input6}`,
     }
 
-    
-
-    // information.cliente = '';
-
-
-    console.log(information);
     listarCard(information);
-
-  
 
     } 
 }
 
+
+
+
+
+
 function listarCard(information) {
+   
+    // soma();
+
+
 
     const{cliente, dia, horarioInicio, horarioFim, servico, observacao} = information;
     let localizacaoCard = document.getElementById("localizacaoCard");
 
+
     let div = document.createElement("div");
     div.classList.add("cardDeAgendamento");
-   
+
     let div2 = document.createElement("div");
     
     let p1 = document.createElement("p");
@@ -102,15 +97,81 @@ function listarCard(information) {
     div.appendChild(obs); 
 
 
-   inputsI.value = '';
-   inputsII.value = '';
-   inputsIII.value = '';
-   inputsIV.value = '';
-   inputsX.value = '';
-   inputsXI.value = '';
+    input1Clean.value = '';
+    input2Clean.value = '';
+    input3Clean.value = '';
+    input4Clean.value = '';
+    input5Clean.value = '';
+    input6Clean.value = '';
+
+    // console.log(div)
+    
 
 
+
+
+    div.ondblclick = function(){
+        let cancelar = document.getElementById("cancelar");
+        let sim = document.getElementById("sim");
+
+        cancelar. addEventListener("click", function(event) {
+            certificacaoDeExclusao.style.display="none";
+        })
+
+
+        sim. addEventListener("click", function() {
+           
+            certificacaoDeExclusao.style.display="none";
+            div.remove();
+            // valor--;
+        })
+
+
+        let certificacaoDeExclusao = document.getElementById("certificacaoDeExclusao");   
+        certificacaoDeExclusao.style.display="block";
+
+    }   
+
+    
+
+    // var element =  document.querySelector(".cardDeAgendamento");
+    // if (typeof(element) != 'undefined' && element != null)
+    // {
+    //     window.alert("existe")
+    // }else{
+    //     window.alert("não existe")
+    // }
+    // console.log(div);
 }
+
+
+
+
+
+// let valor = 0;
+// function soma() {
+//     valor++;
+//     console.log(valor);
+// }
+
+//     var myElement = document.querySelector(".cardDeAgendamento")
+
+// if(!myElement.parentNode)
+// {
+//     window.alert("não existe")
+// }
+// else
+// {
+//     window.alert("existe")
+// }
+
+//     console.log(div);
+// }
+
+
+
+
+
 
 
 
@@ -119,10 +180,9 @@ function listarCard(information) {
 // COISAS PARA IMPLEMENTAR NO PROJETO:
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+// * ARRUMAR FORMA DE APAGAR CARD (DOIS CLICKS)          OK!
 
-// * ORDEM DO CARD DE ACORDO COM O HÓRARIO E DIA (DESTACAR O QUE SERA ATENDIDO)
-
-// * OPÇÃO PARA APAGAR OU ALTERAR O CONTEÚDO DO CARD
+// * ORDEM DO CARD DE ACORDO COM O HÓRARIO E DIA (DESTACAR O QUE SERA ATENDIDO) 
 
 // * LISTA COM TODAS AS INFORMAÇÕES QUE O USÚARIO PRECISA SABER PARA UTILIZA-LO
 
